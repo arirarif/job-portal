@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import HotJobCard from "./HotJobCard";
 
 const HotJobs = () => {
@@ -11,8 +11,8 @@ const HotJobs = () => {
   }, []);
   return (
     <div>
-      <div>
-        {jobs.map((job) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-16">
+        {jobs.map(job => (
           <HotJobCard key={job._id} job={job}></HotJobCard>
         ))}
       </div>
